@@ -71,5 +71,19 @@ console.log(joydipObject['salary'])
 console.log(joydipObject.print())
 //console.log(joydipObject['print']())
 
+
+function changeText() {
+    var hElement = document.getElementById('headerElement')
+    hElement.innerText += ' by using HTML, CSS and JavaScript'
+    //hElement.style.fontFamily = 'Arial'
+    hElement.classList.add('header-text')
+
+    var para = document.createElement('p')
+    para.innerHTML = '<b>Next is TypeScript</b>'
+
+    var div = document.getElementById('extra')
+    div.appendChild(para)
+}
+
 //}
 //main()

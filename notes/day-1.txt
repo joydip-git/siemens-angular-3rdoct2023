@@ -25,3 +25,10 @@ undefined, NaN, Infinity, NULL
 != inequality
 == -> equality (checks value of both operands are same or not)
 
+
+JS engine:
+chrome: V8
+firefox: Spidermonkey
+safari: JS Core
+opera, edge
+
