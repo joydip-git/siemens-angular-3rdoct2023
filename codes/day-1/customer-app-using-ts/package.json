@@ -1,0 +1,14 @@
+{
+  "name": "customer-app",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "compile": "tsc --watch"
+  },
+  "keywords": [],
+  "author": "joydip",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  }
+}
