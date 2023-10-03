@@ -1,0 +1,27 @@
+https://github.com/joydip-git/siemens-angular-3rdoct2023
+
+Angular learning curve:
+	HTML, CSS, JavaScript
+	New Features of JS
+	TypeScript
+	
+
+angular-apps
+
+application development server (app server)
+
+background-color:blue;
+font-family:consolas;
+property-name:value;
+
+
+data types in JS:
+string, object, number, boolean, function
+undefined, NaN, Infinity, NULL
+
+!== strict inequality
+=== -> strict equality (checks data type as well as value of both operands are same or not)
+
+!= inequality
+== -> equality (checks value of both operands are same or not)
+

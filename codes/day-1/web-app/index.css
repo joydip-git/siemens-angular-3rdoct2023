@@ -1,0 +1,52 @@
+/* element selector */
+/*
+h3 {
+  background-color: burlywood;
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+}
+*/
+
+/* id selector */
+/* #headerElement {
+  background-color: burlywood;
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+}
+#footerElement {
+  background-color: bisque;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: smaller;
+  text-align: center;
+} */
+
+/* class selector */
+
+.common-alignment-style {
+  text-align: center;
+}
+
+.header-style {
+  background-color: burlywood;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.footer-style {
+  background-color: bisque;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: smaller;
+}
+
+.button-style {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: medium;
+  background-color: blueviolet;
+  border-style: solid;
+  border-width: 1px;
+  border-color: blueviolet;
+  padding: 5px;
+  border-radius: 5px;
+  color: aliceblue;
+}
