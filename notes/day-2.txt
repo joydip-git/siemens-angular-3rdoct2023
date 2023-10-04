@@ -28,3 +28,11 @@ a. from code to view: (data binding)
 b. from view to code: (event binding)
 <element (event-name)="method-of-class(args....)"></element>
 
+@Component(), @NgModule() (decorator functions), PlatformRef (type)  => @angular/core package
+platformBrowserDymaic() method => @angular/platform-browser-dynamic
+BrowserModule (module class) => @angular/platform-browser
+
+
+
+
+
