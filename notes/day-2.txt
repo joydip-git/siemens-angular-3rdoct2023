@@ -33,6 +33,62 @@ platformBrowserDymaic() method => @angular/platform-browser-dynamic
 BrowserModule (module class) => @angular/platform-browser
 
 
+app
+	app.component.ts
+	app.component.html
+	app.component.css
+	app.module.ts
+
+	products (folder)
+		products.module.ts
+
+		components (folder)
+			product-list (folder)
+				product-list.component.ts
+				product-list.component.html
+				product-list.component.css
+
+			product-detail (folder)
+				product-detail.component.ts
+				product-detail.component.html
+				product-detail.component.css
+			
+		pipes (folder)
+
+		directives (folder)
+
+		services (folder)
+
+
+..../pms-app>ng generate module products
+.../pms-app>ng generate component products/components/product-list --skip-tests
+.../pms-app>ng generate pipe products/pipes/product-filter --skip-tests
+
+
+directives:
+	a. structural: manipulate the dom (*ngFor, *ngIf, *ngIfElse, *ngSwitch)
+	b. attribute: ngClass, ngStyle etc
+	c. component directive: components (they are actually directive with design/view)
+
+@Directive({
+	selector:'[ngFor]'
+})
+export class NgForDirective{
+	method(expression){
+	}
+}
+
+
+@Pipe({name:'currency'})
+export class CurrencyPipe{
+	transform(arg:any, ...args:any[]){
+		args[0]
+	}
+}
+
+{{ data|currency:'INR':'1-2'}}
+
+
 
 
 
