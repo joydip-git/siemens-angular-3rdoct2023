@@ -1,0 +1,30 @@
+Angular:
+									
+	a. component (design)	@Component()
+									class SomeComponent{}
+									some.component.ts/html/css
+
+	b. directive				@Directive()
+									class SomeDirective{}
+									some.directive.ts
+
+	c. pipe						@Pipe()
+									class SomePipe		
+									some.pipe.ts
+
+	d. service					@Injectable()
+									class SomeService{}
+									some.service.ts
+
+	e. module					@NgModule()
+									class SomeModule{}
+									some.module.ts
+
+
+data passing between view and code of a component:
+a. from code to view: (data binding)
+{{ class-attribute-name }} => interpolation
+
+b. from view to code: (event binding)
+<element (event-name)="method-of-class(args....)"></element>
+

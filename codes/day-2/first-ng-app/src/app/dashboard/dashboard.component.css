@@ -1,0 +1,13 @@
+nav {
+  background-color: bisque;
+}
+button {
+  background-color: blueviolet;
+  border-color: blueviolet;
+  border-radius: 5px;
+  border-width: 1px;
+  border-style: solid;
+  color: azure;
+  font-family: "Courier New", Courier, monospace;
+  font-size: medium;
+}

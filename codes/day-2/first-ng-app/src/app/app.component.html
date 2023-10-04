@@ -1,0 +1,17 @@
+<app-dashboard></app-dashboard>
+<br>
+<h2>
+    {{title}}
+</h2>
+<br>
+
+<div>
+    <label for="txtTitle">
+        Enter Title: &nbsp;
+    </label>
+    <input type="text" id="txtTitle" #titleInput>
+</div>
+
+<button type="button" (click)="changeText(titleInput.value)">Change Text</button>
+
+<!--const titleInput = document.getElementById('txtTitle')-->
