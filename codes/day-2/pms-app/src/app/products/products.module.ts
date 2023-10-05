@@ -6,6 +6,7 @@ import { AddProductComponent } from './components/add-product/add-product.compon
 import { UpdateProductComponent } from './components/update-product/update-product.component';
 import { ProductFilterPipe } from './pipes/product-filter.pipe';
 import { StarComponent } from './components/star/star.component';
+import { FilterComponent } from './components/filter/filter.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { StarComponent } from './components/star/star.component';
     AddProductComponent,
     UpdateProductComponent,
     ProductFilterPipe,
-    StarComponent
+    StarComponent,
+    FilterComponent
   ],
   imports: [
     CommonModule

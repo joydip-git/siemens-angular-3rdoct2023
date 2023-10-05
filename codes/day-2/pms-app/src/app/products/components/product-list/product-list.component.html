@@ -3,10 +3,11 @@
         List of Products
     </h2>
 
-    <div class="md-4">
+    <!-- <div class="md-4">
         <label for="txtFilter">Filter By: &nbsp;</label>
         <input type="text" id="txtFilter" [value]="filterText" (keyup)="updateFilterText(filter.value)" #filter>
-    </div>
+    </div> -->
+    <app-filter (filterDataChanged)="updateFilterText($event)"></app-filter>
 
     <br>
 

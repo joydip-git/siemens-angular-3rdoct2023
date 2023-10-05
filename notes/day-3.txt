@@ -1,6 +1,11 @@
 interaction between two nested components:
 	a. passing data from parent to child/nested (custom attribute of a component which can receive data from parent)
+		declare a property in the nested component with Input() decorator
+		use the property from parent component to pass the data to nested component
 	b. passing data from nested to its parent
+		create an event in the nested component (declare a property in the nested component class and assign the property to an object of EventEmitter<T>)
+		fire the event from the nested component (by callin the emit() method) and pass the data trough that event to the parent
+		in the parent component design, bind the event of the nested component with the method of parent component class
 
 
 View												code
