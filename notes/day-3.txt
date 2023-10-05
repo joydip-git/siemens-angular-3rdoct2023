@@ -48,6 +48,30 @@ ProductService => ProductService
 
 	@Inject() => decorator for method parameter. It tells angular to create an instance of service class associated/identified by a token, passed to @Inject() decorator
 
+	@Injectable() => marks an artifact as eligible for dependency injection
+
+
+URL												method			data		response
+http://127.0.0.1:3003/products			GET				NA			{ "message":"", data:[{},{},...]}
+
+http://127.0.0.1:3003/products/{id}	GET				id			{ "message":"", data:{} }
+																			{ "message":"", data:null }
+
+http://127.0.0.1:3003/products/{id}	DELETE			id			{ "message":"", data:[{},{},...] }
+																			{ "message":"", data:null }
+
+http://127.0.0.1:3003/products/{id}	PUT			id, product	{ "message":"", data:[{},{},..] }
+																			{ "message":"", data:null }
+
+http://127.0.0.1:3003/products			POST			product	{ "message":"", data:[{},{},...] }
+																			{ "message":"", data:null }
+
+
+Making HTTP Requests from Angular:
+HttpClient => built-in service class
+HttpClientModule => module with which HttpClient is registered
+@angular/common/http => package
+
 
 
 

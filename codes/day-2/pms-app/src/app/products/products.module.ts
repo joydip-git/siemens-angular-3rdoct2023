@@ -9,6 +9,7 @@ import { StarComponent } from './components/star/star.component';
 import { FilterComponent } from './components/filter/filter.component';
 import { ProductService } from './services/product.service';
 import { PRODUCT_SERVICE_TOKEN, SERVICE_TYPE } from '../constants/app-constants';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { PRODUCT_SERVICE_TOKEN, SERVICE_TYPE } from '../constants/app-constants'
     FilterComponent
   ],
   imports: [
-    CommonModule
+    CommonModule, HttpClientModule
   ],
   exports: [ProductListComponent],
   providers: [

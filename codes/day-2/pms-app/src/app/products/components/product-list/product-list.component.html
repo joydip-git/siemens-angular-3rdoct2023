@@ -11,30 +11,46 @@
 
     <br>
 
-    <table class="table table-hover" *ngIf="productRecords">
-        <thead>
-            <tr>
-                <th>Image</th>
-                <th>Name</th>
-                <th>Price</th>
-                <th>Rating</th>
-                <th>Delete</th>
-            </tr>
-        </thead>
-        <tbody class="table-primary">
-            <tr *ngFor="let p of productRecords|filterproduct:filterText">
-                <td>
-                    <img src="{{p.imageUrl}}" alt="NA" class="img img-responsive">
-                </td>
-                <td>{{p.productName|uppercase}}</td>
-                <td>{{p.price|currency:'INR'}}</td>
-                <td>
-                    <app-star [rating]="p.starRating"></app-star>
-                </td>
-                <td>
-                    <button type="button" class="btn btn-danger">Delete</button>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    <ng-template #completeTemplate>
+        <span>Loading...please wait</span>
+    </ng-template>
+
+    <ng-template #errorTemplate>
+        <span>{{errorMessage}}</span>
+    </ng-template>
+
+    <ng-template #nodataTemplate>
+        <span>No record found</span>
+    </ng-template>
+
+    <div *ngIf="isComplete;else completeTemplate">
+        <div *ngIf="errorMessage=='';else errorTemplate">
+            <table class="table table-hover" *ngIf="productRecords && productRecords.length>0;else nodataTemplate">
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Rating</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody class="table-primary">
+                    <tr *ngFor="let p of productRecords|filterproduct:filterText">
+                        <td>
+                            <img src="{{p.imageUrl}}" alt="NA" class="img img-responsive">
+                        </td>
+                        <td>{{p.productName|uppercase}}</td>
+                        <td>{{p.price|currency:'INR'}}</td>
+                        <td>
+                            <app-star [rating]="p.starRating"></app-star>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-danger">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
