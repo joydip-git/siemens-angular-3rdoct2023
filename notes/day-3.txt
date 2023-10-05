@@ -73,6 +73,36 @@ HttpClientModule => module with which HttpClient is registered
 @angular/common/http => package
 
 
+DashBoard
+Home		Products			Add Product
+
+Routing:
+app.module.ts
+localhost:4200 => Home
+localhost:4200/home => Home
+localhost:4200/anything-else => PageNotFound
+
+product.module.ts
+localhost:4200/products => ProductList
+localhost:4200/products/view/{id} => ProductDetail
+localhost:4200/products/update/{id} => UpdateProduct
+localhost:4200/products/add => AddProduct
+
+
+
+@angular/router => package
+
+simple types: Route, Routes (Route[])
+directives: routerLink etc.
+service: Router, ActivatedRoute
+components: <router-outlet></router-outlet>
+module: RouterModule
+
+1. create route type instances
+2. create an array with those routes
+3. register the array with angular router framework
+
+
 
 
 

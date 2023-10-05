@@ -38,9 +38,15 @@
                 <tbody class="table-primary">
                     <tr *ngFor="let p of productRecords|filterproduct:filterText">
                         <td>
-                            <img src="{{p.imageUrl}}" alt="NA" class="img img-responsive">
+                            <div [routerLink]="['/products','view',p.productId]">
+                                <img src="{{p.imageUrl}}" alt="NA" class="img img-responsive">
+                            </div>
                         </td>
-                        <td>{{p.productName|uppercase}}</td>
+                        <td>
+                            <div [routerLink]="['/products','update',p.productId]">
+                                {{p.productName|uppercase}}
+                            </div>
+                        </td>
                         <td>{{p.price|currency:'INR'}}</td>
                         <td>
                             <app-star [rating]="p.starRating"></app-star>

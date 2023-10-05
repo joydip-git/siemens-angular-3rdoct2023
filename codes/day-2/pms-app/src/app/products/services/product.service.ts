@@ -17,6 +17,9 @@ export class ProductService implements IProductServiceContract {
     constructor(private http: HttpClient) {
 
     }
+    getProductById(id: number): Observable<ApiResponse<Product>> {
+        return this.http.get<ApiResponse<Product>>(API_URL + '/' + id.toString())
+    }
     getProducts(): Observable<ApiResponse<Product[]>> {
         //spread operator (...)
         //return [...products]
