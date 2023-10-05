@@ -32,3 +32,25 @@ event-name				interface-name			method-name
 X								OnX							ngOnX
 
 changes						OnChanges					ngOnChanges
+
+service and dependency injection:
+register the service:
+	a. service is consumed by one artifact (component/directive/pipe/module/service), then register the service at that artifact level
+
+token => service
+ProductService => ProductService
+
+	b. service is consumed by any artifact of a feature module, then register the service at that feature module level
+
+	c. service is consumed by any artifact from the entire application across all modules, then register the service at root module level
+
+	injector => at 3 levels
+
+	@Inject() => decorator for method parameter. It tells angular to create an instance of service class associated/identified by a token, passed to @Inject() decorator
+
+
+
+
+
+
+

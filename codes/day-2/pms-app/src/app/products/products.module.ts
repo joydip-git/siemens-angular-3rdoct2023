@@ -7,6 +7,8 @@ import { UpdateProductComponent } from './components/update-product/update-produ
 import { ProductFilterPipe } from './pipes/product-filter.pipe';
 import { StarComponent } from './components/star/star.component';
 import { FilterComponent } from './components/filter/filter.component';
+import { ProductService } from './services/product.service';
+import { PRODUCT_SERVICE_TOKEN, SERVICE_TYPE } from '../constants/app-constants';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,13 @@ import { FilterComponent } from './components/filter/filter.component';
   imports: [
     CommonModule
   ],
-  exports: [ProductListComponent]
+  exports: [ProductListComponent],
+  providers: [
+    //ProductService
+    {
+      provide: PRODUCT_SERVICE_TOKEN,
+      useClass: SERVICE_TYPE
+    }
+  ]
 })
 export class ProductsModule { }

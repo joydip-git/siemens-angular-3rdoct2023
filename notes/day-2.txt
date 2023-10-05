@@ -64,6 +64,8 @@ app
 ..../pms-app>ng generate module products
 .../pms-app>ng generate component products/components/product-list --skip-tests
 .../pms-app>ng generate pipe products/pipes/product-filter --skip-tests
+.../pms-app>ng generate service products/services/product --skip-tests
+
 
 
 directives:
