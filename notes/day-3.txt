@@ -1,0 +1,29 @@
+interaction between two nested components:
+	a. passing data from parent to child/nested (custom attribute of a component which can receive data from parent)
+	b. passing data from nested to its parent
+
+
+View												code
+property binding
+<element [attribute]="data">	        data=100
+
+
+component life cycle
+1. creation:
+	a. constructor
+	b. changes (event)
+	c. init (event)
+
+2. updation
+	a. changes
+	...........
+
+3. destruction
+	a. destroy
+	
+
+event-name				interface-name			method-name
+----------------------------------------------------------
+X								OnX							ngOnX
+
+changes						OnChanges					ngOnChanges

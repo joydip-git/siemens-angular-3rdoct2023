@@ -1,35 +1,39 @@
-<h2>
-    List of Products
-</h2>
+<div class="container container-fluid main-margin">
+    <h2 class="text-dark">
+        List of Products
+    </h2>
 
-<div>
-    <label for="txtFilter">Filter By: &nbsp;</label>
-    <input type="text" id="txtFilter" value="{{filterText}}" (keyup)="updateFilterText(filter.value)" #filter>
+    <div class="md-4">
+        <label for="txtFilter">Filter By: &nbsp;</label>
+        <input type="text" id="txtFilter" [value]="filterText" (keyup)="updateFilterText(filter.value)" #filter>
+    </div>
+
+    <br>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Rating</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody class="table-primary">
+            <tr *ngFor="let p of productRecords|filterproduct:filterText">
+                <td>
+                    <img src="{{p.imageUrl}}" alt="NA" class="img img-responsive">
+                </td>
+                <td>{{p.productName|uppercase}}</td>
+                <td>{{p.price|currency:'INR'}}</td>
+                <td>
+                    <app-star [rating]="p.starRating"></app-star>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-danger">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </div>
-
-<br>
-
-<table>
-    <thead>
-        <tr>
-            <th>Image</th>
-            <th>Name</th>
-            <th>Price</th>
-            <th>Rating</th>
-            <th>Delete</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let p of productRecords|filterproduct:filterText">
-            <td>
-                <img src="{{p.imageUrl}}" alt="NA">
-            </td>
-            <td>{{p.productName|uppercase}}</td>
-            <td>{{p.price|currency:'INR'}}</td>
-            <td>{{p.starRating}}</td>
-            <td>
-                <button type="button" class="button-alert">Delete</button>
-            </td>
-        </tr>
-    </tbody>
-</table>

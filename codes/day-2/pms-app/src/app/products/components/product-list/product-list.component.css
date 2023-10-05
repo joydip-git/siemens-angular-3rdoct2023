@@ -1,24 +1,28 @@
-img {
-  width: 75px;
-  margin: 2px;
-}
 table {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
-thead {
+.header-row {
   background-color: burlywood;
 }
 th {
   padding: 0px;
   margin: 0px;
+  background-color: burlywood;
+}
+img {
+  width: 75px;
+  margin: 2px;
 }
 .button-alert {
   border: 1px solid blueviolet;
   border-radius: 5px;
   background-color: blueviolet;
   color: whitesmoke;
-  font-family: "Courier New", Courier, monospace;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: medium;
   padding: 5px;
+}
+.main-margin {
+  margin-top: 20px;
 }

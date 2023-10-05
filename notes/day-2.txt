@@ -24,6 +24,7 @@ Angular:
 data passing between view and code of a component:
 a. from code to view: (data binding)
 {{ class-attribute-name }} => interpolation
+<element [attribute-name]="data"> => property binding
 
 b. from view to code: (event binding)
 <element (event-name)="method-of-class(args....)"></element>
